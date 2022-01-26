@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    
+        <script>
+
+            const SERIE = 'Friends'; //Segue as mesmas regras de escopo do let
+                                    //Geralmente declada em Maiusculo
+                                    //Usada para valores que não serao alterados
+
+            function x() {
+                const SERIE = 'The Walking Dead';
+                console.log('Dentro da funcao: ' + SERIE);
+            }
+            
+            x();
+
+            console.log('escopo global: ' + SERIE);
+
+        </script>
+    
+    </head>
+    <body>
+        
+    </body>
+</html>
