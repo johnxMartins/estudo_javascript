@@ -6,6 +6,8 @@
     
         <script>
 
+
+            /*
             var serie = 'Friends'; //esse valor nao vai aparecer 
 
             {
@@ -14,6 +16,16 @@
             }
 
             console.log('fora do bloco: ' + serie);
+            */    
+        
+            let serie = 'Friends'; 
+
+            {
+                let serie = 'The Walking Dead'; // Apenas dentro bloco esse valor sera valido
+                console.log('dentro do bloco: ' + serie);
+            }
+
+            console.log('fora do bloco: ' + serie); //fora do bloco a variavel serie n sera modifica portanto o resultado sera 'friends'
 
         </script>
     
