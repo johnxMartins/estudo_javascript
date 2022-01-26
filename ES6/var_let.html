@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    
+        <script>
+            
+            //3 escopos:global, função e bloco
+            //Se criarmos var dentro do escopo de bloco essas variaveis sofrem elevação para o escopo da função
+            //Se o escopo de bloco estiver dentro do escopo global essa variavel sofre elevação para o escopo global
+
+            //Exemplo:
+
+            function x() {
+
+                console.log('dentro da função: ' + serie);
+            }
+
+            if (true) {
+                var serie = 'The Walking Dead'; //Aqui a variavel sofrou uma elevação para o escopo global
+                x();                                //logo a variavel por ser global fica disponível em todo nosso código
+                console.log(serie);
+            }
+
+            console.log(serie)
+
+
+            /*
+            var serie = 'Friends';
+
+            function x() {
+                console.log(serie)
+
+                var serie = 'Game Of Thrones';
+                console.log('função' + serie);
+
+                if (true) {
+                    console.log('bloco dentro da função: ' + serie);
+                }
+            }
+
+            x();
+
+            if (true) {
+                console.log('global: ' + serie);
+            }
+            */
+
+            if (true) {
+                let series = 'Friends'; //Let preserva o escopo em que está inserido logo não permite elevações
+            }
+
+            console.log(series); //Dessa forma não podemos chamala fora daquele bloco em que foi criada
+                //erro
+
+        </script>
+    
+    </head>
+    <body>
+        
+    </body>
+</html>
