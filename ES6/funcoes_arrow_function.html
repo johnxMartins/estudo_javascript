@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+    
+        <script>
+
+            /*
+            let quadrado = function(x = 5) {
+                return x * x; 
+            }
+            */
+
+            /*
+            let quadrado = (x) => {
+                return x * x;
+            }
+            */
+
+            //let quadrado = x => x * x; // Return implícito
+
+            //document.write(quadrado(3) );
+            
+            /*
+            let parOuImpar = function(numero) {
+
+                if(numero % 2 ===0) {
+                    return 'par';
+                } else {
+                    return 'impar';
+                }
+            }
+            */
+
+            /*
+            let parOuImpar = numero => {
+                if(numero % 2 ===0) {
+                    return 'par';
+                } else {
+                    return 'impar';
+                }
+            }
+            */
+
+            let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'ímpar'; //return ímplicito
+
+            document.write(parOuImpar(155));
+
+        </script>
+    
+    </head>
+    <body>
+        
+    </body>
+</html>
