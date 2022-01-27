@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+    
+        <script>
+            
+            let assinatura = {
+                idCliente: 1000,
+                descricao: 'Acesso a internet',
+                status() {
+                    console.log('Ativo');
+                }
+            }
+
+            console.log(assinatura.descricao);
+
+            let y = assinatura; //Assim temos um unico objeto dentro da nossa aplicação que esta sendo referenciado  
+                                                // por variaveis diferentes.
+            console.log(y.descricao);
+
+            y.descricao = 'Internet + tv + telefone';
+
+            console.log(assinatura.descricao);
+            console.log(y.descricao);       //Dessa formas as duas variaveis diferentes apontaram para o mesmo lugar.
+
+        </script>
+     
+    </head>
+    <body>
+        
+    </body>
+</html>
