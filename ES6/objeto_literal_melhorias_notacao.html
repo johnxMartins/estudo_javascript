@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+    
+        <script>
+            
+            let nome = 'Jorge';    //document.write.getElementById("nome").value
+            let idade = 20;
+            let sexo = 'Masculino';
+            let profissao = 'Programador';
+
+            let objeto = {
+                nome: nome,
+                idade: idade,
+                sexo: sexo,
+                profissao: profissao,
+                exibirResumo: function() {
+                    console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`);
+                }
+            }
+
+            console.log(objeto);
+            objeto.exibirResumo();
+
+            let objeto2 = {
+                nome,              // nome = nome da variável / valor = valor da variável
+                idade,
+                sexo,
+                profissao,
+                exibirResumo2() { //Agr passamos a função a partir do nome
+                    console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`);
+                }
+            }
+
+            console.log(objeto2);
+            objeto2.exibirResumo2();
+
+        </script>
+     
+    </head>
+    <body>
+        
+    </body>
+</html>
