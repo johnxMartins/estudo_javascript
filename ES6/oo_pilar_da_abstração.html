@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+    
+        <script>
+            
+            //modelo da entidade/objeto
+            class ContaBancaria {
+                //agencia /numeroConta /saldo /limite
+                constructor() {
+                    this.agencia = 1075;
+                    this.numeroConta = 83453232;
+                    this.saldo = 50;
+                    this.limite = 500;
+                }
+
+                depositar(valorDeposito) {
+                    this.saldo += valorDeposito;
+                }
+
+                sacar(valorSaque) {
+                    this.saldo -= valorSaque;
+                }
+
+                consultarSaldo(){
+                    return this.saldo;
+                }
+            }
+            
+            let x = new ContaBancaria();
+            let y = new ContaBancaria();
+
+            console.log(x.consultarSaldo());
+            x.depositar(50);
+            console.log(x.consultarSaldo());
+            x.sacar(500); //Passou do limite
+            console.log(x.consultarSaldo());
+
+            console.log(y.consultarSaldo()); //valor do objeto y permanece intacto
+        
+        </script>
+    
+    </head>
+    <body>
+        
+    </body>
+</html>
