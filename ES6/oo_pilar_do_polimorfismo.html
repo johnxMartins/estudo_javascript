@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+    
+        <script>
+            
+            class Animal {
+                constructor(cor, tamanho, peso) {
+                    this.cor = cor;
+                    this.tamanho = tamanho;
+                    this.peso = peso;
+                }
+
+                dormir() {
+                    console.log('Dormir');
+                }
+            }
+        
+            class Passaro extends Animal {
+                constructor(bico, cor, tamanho, peso) {
+                    super(cor, tamanho, peso);
+                    this.bico = bico;
+                }
+
+                voar() {
+                    console.log('Voar');
+                }
+            }
+
+            class Papagaio extends Passaro { //Papagaio recebe os atributos da classa Passaro que ja esta recebendo atributos da
+                constructor(sabeFalar, cor, tamanho, peso) {  
+                    super('Medio', cor, tamanho, peso);                   // classe animal, fazendo assim uma cascata
+                    this.sabeFalar = sabeFalar;
+                }
+
+                falar() {
+                    console.log('falar');
+                }
+            }
+
+            class Avestruz extends Passaro {
+                constructor(){
+                    super('grande', 'Branco e preto', 250, 15000);
+                }
+
+                enterrarCabeca() {
+                    console.log('Enterrar cabeça');
+                }
+
+                voar() {
+                    console.log('Não sabe voar');
+                }
+
+            }
+
+            let papagaio = new Papagaio(true, 'Verde', 25, 350);
+            console.log(papagaio);
+
+            papagaio.voar();
+
+            let avestruz = new Avestruz();
+            avestruz.enterrarCabeca();
+            avestruz.voar();
+ 
+        </script>
+    
+    </head>
+    <body>
+        
+    </body>
+</html>
