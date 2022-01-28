@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+    
+        <script>
+            
+            let produto = {
+                descricao: 'Notebook',
+                preco: 1800,
+                detalhes: {
+                    fabrixante: 'abc',
+                    modelo: undefined
+                }
+            }
+            
+            //token
+            //array => []
+            //objeto => {}
+
+            //let { descrição, preço } = produto
+
+            //let { descrição: d, preco: p } = produto
+
+            //let { descrição: d, preco: p, desconto } = produto
+
+            //let { descrição: d, preco: p = 1000, desconto = 5 } = produto
+
+            let { detalhes: { fabricante: f, modelo = 'Nao informado' } } = produto;
+            console.log(f, modelo);
+
+        </script>
+     
+    </head>
+    <body>
+        
+    </body>
+</html>
